@@ -1,0 +1,10 @@
+image: gitpod/workspace-full:latest
+
+tasks:
+  - name: Install Laravel
+    init: ./setup.sh
+    command: php artisan serve --host=0.0.0.0
+
+ports:
+  - port: 8000
+    onOpen: open-preview
